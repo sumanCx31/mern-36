@@ -24,3 +24,4 @@ BY SANDESH BHATTRAI
 cltr+alt+i => open chat
 
 git branch check :git branch --show-current
+git remote add url
