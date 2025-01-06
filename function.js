@@ -16,7 +16,7 @@
 // fooBar()
 // console.log(a);
 
-// Find the sum of first 20 even numbers without using loop
+// Find the sum of first 20 even numbers without using loop:
 let sum = 0;
 function Recursive(num) {
     if (num <= 20) {
