@@ -1,4 +1,5 @@
-const products = [
+const products = 
+[
     { name: 'Product 1', price: 100, discount: 10, category: 'Category A' },
     { name: 'Product 2', price: 200, discount: 15, category: 'Category B' },
     { name: 'Product 3', price: 300, discount: 20, category: 'Category C' },
@@ -27,9 +28,7 @@ const discountProduct = (prod) => {
 
 
 products.map(discountProduct)
-
-
-console.log(array);
-
-
 array = products.filter((prod) => prod.discount < 20);
+console.log(array)
+
+

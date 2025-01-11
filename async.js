@@ -4,34 +4,42 @@
 // 2.Fulfilled:When the promise is fulfilled
 // 3.Rejected:When the promise is rejected
 
-const login = (username,password) => {
-    return new Promise((resolve,reject) => {
-        let success = false;
-        if(username === 'admin' && password === '12345')
-        {
-            success = true;
-        }
-        if(success)
-        {
-            resolve("You are logged in");
-        }
-         else {
-            reject("Promise is rejected");
-            }
-        }).then((message) => {
-            console.log(message);
-            data();
-        });
-    function data()
-    {
-            console.log("name:suman\nage:20\ncity:ktm"); 
-        }
-    }
+//Handling of Promise through then,catch,finally.
 
-login('admin','12345')
-.then((RESOLVE) => {
-    console.log(RESOLVE);
-})
-.catch((REJECTION) => {
-    console.log(REJECTION);
-})
+const fun1 = (x) => {
+    return new Promise((res, rej) => {
+      if(x) {
+        res("I am resolve of func1")
+      } else {
+        rej("I am reject of func1")
+      }
+    })
+  }
+  
+  const fun2 = (x) => {
+    return new Promise((res, rej) => {
+      if(x) {
+        res("I am resolve of func2")
+      } else {
+        rej("I am reject of func2")
+      }
+    })
+  }
+  
+  fun1(true)
+    .then((res1) => {
+  
+      console.log(res1)
+  
+      fun2(false)
+        .then((res2) => {
+          console.log(res2)
+        })
+        .catch((exception) => {
+          console.log(exception)
+        })
+    })
+    .catch((exception) => { 
+      console.log(exception)
+    })
+  

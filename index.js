@@ -15,7 +15,7 @@ console.log(y);
     let y=20
     console.log(y)
 }
-console.log(y);
+// console.log(y);
 
 /*NITESH RAJ UPRETI
 -------------------------------------------
@@ -33,23 +33,3 @@ null
 7.Array(single/multi dimensional)
 --------------------------------------------
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
