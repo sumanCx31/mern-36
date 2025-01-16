@@ -11,35 +11,63 @@
 //     }
 // }
 
-class product{
-    name;
-    price;
-    discount;
-    discountAmount=0;
-    constructor(_name,_price,_discount)
-    {
-      this.name=_name;
-      this.price=_price;
-      this.discount=_discount;
-      this.afterDiscount=0;
-    }
-  DiscountAmount()
-{
-  let discountAmount
-  discountAmount=this.price*(15/100)
-  return this.discountAmount
-}
+// class product{
+//     name;
+//     price;
+//     discount;
+//     discountAmount = 0;
+//     afterDiscount = 0;
+//     constructor(_name, _price, _discount)
+//     {
+//       this.name = _name;
+//       this.price = _price;
+//       this.discount = _discount;
+//     }
+//   DiscountAmount()
+// {
+//   this.discountAmount = this.price * (this.discount / 100);
+//   return this.discountAmount;
+// }
 
-Afterdiscount()
+// Afterdiscount()
+// {
+//   this.afterDiscount = this.price - this.discountAmount;
+//   return this.afterDiscount;
+// }
+// }
+
+// const prod = new product("samsung", 36000, 15);
+// prod.DiscountAmount();
+// prod.Afterdiscount();
+
+// console.log(prod);
+
+
+class Item{
+ name;
+ price;
+ discount;
+ constructor(a,b,c)
+ {
+  this.name=a;
+  this.price=b;
+  this.discount=c;
+ }
+ discount_amount()
 {
-  let afterDiscount
-  afterDiscount=this.price-this.discountAmount
+this.discountAmount=this.price*(15/100)
+return this.discountAmount
+}
+ after_discount()
+ {
+  this.afterDiscount=this.price-this.discountAmount
   return this.afterDiscount
-}
+ }
 }
 
-const prod = new product("samsung",36000,15)
-prod.DiscountAmount()
-prod.Afterdiscount
+const obj = new Item("SAMSUNG",45000,15);
+obj.discount_amount();
+obj.after_discount();
+console.log(obj);
 
-console.log(prod);
+
